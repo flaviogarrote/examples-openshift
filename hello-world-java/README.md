@@ -9,7 +9,7 @@
 2. Create a new app, based on s2i strategy
 
 ```sh
-> oc new-app --name source-to-image -i java:8 https://github.com/rofrba/examples-openshift --context-dir hello-world-java
+> oc new-app --name source-to-image -i java:8 https://github.com/flaviogarrote/examples-openshift --context-dir hello-world-java
 ```
 
 3. Expose the service
@@ -23,5 +23,5 @@ OPTIONAL: If you need to use a Secret to pull source code from the git repositor
 oc create secret generic git-credentials --from-literal=username=myUserName --from-literal=password=myPassword
 ```
 ```sh
-> oc new-app --name source-to-image -i java:8 https://github.com/rofrba/examples-openshift --context-dir hello-world-java --source-secret=git-credentials
+> oc new-app --name source-to-image -i java:8 https://github.com/flaviogarrote/examples-openshift --context-dir hello-world-java --source-secret=git-credentials
 ```

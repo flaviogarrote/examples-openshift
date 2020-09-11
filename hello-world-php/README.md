@@ -4,7 +4,7 @@
 1. Fork the project into your local github account.
 2. Clone the repository on your machine
 ```sh
-> git clone https://github.com/your_username/examples-openshift
+> git clone https://github.com/flaviogarrote/examples-openshift
 ```
 2. Create a new branch to save any changes
 ```sh
@@ -13,7 +13,7 @@
 ```sh
 > git push -u origin s2i
 ```
-3. Create a new project 
+3. Create a new project
 
 ```sh
 > oc new-project s2i-demo
@@ -22,7 +22,7 @@
 4. Create a new app, based on s2i strategy
 
 ```sh
-> oc new-app -i php:7.1 --name=php-helloworld  https://github.com/your_username/examples-openshift  --context-dir php-hello-world
+> oc new-app -i php:7.1 --name=php-helloworld  https://github.com/flaviogarrote/examples-openshift  --context-dir php-hello-world
 ```
 
 5. Verify that the build process starts with the oc get pods command
@@ -57,7 +57,7 @@ print "A change is a coming!\n";
 ```
 Save the file
 
-11. Commit the changes and push the code 
+11. Commit the changes and push the code
 ```sh
 > git add .
 > git commit -m "Changed index page contents"
@@ -71,7 +71,7 @@ Save the file
 ```
 13. After the second build has completed use the oc get pods command to verify that the new version of the application is running
 ```sh
-> oc get pods 
+> oc get pods
 ```
 
 14. Test that the application servers the new content
@@ -86,5 +86,5 @@ OPTIONAL: If you need to use a Secret to pull source code from the git repositor
 oc create secret generic git-credentials --from-literal=username=myUserName --from-literal=password=myPassword
 ```
 ```sh
-> oc new-app -i php:7.1 --name=php-helloworld  https://github.com/rofrba/examples-openshift  --context-dir php-helloworld --source-secret=git-credentials
+> oc new-app -i php:7.1 --name=php-helloworld  https://github.com/flaviogarrote/examples-openshift  --context-dir php-helloworld --source-secret=git-credentials
 ```
