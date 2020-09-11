@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class TestController {
     @GetMapping(path = "/")
-    public ResponseEntity<Object> sayHello()  {  
-         
-        return ResponseEntity.status(HttpStatus.OK).body("Service UP v2!");
+    public ResponseEntity<Object> sayHello()  {
+
+        return ResponseEntity.status(HttpStatus.OK).body("Service UP USER10!");
     }
 }
