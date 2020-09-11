@@ -1,4 +1,4 @@
 <?php
 print "Hello, World! php version is " . PHP_VERSION . "\n";
-print "MoNoVersionV6";
+print " - [USER10]";
 ?>
